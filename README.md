@@ -27,4 +27,7 @@ msdb
 Sqlcmd: Warning: The last operation was terminated because the user pressed CTRL+C.
 ```
 
+## Azure data studio
 
+Cross platform database management tool. Highly recommended.
+Install from <https://github.com/Microsoft/azuredatastudio>.
