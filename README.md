@@ -27,7 +27,19 @@ msdb
 Sqlcmd: Warning: The last operation was terminated because the user pressed CTRL+C.
 ```
 
+Server setup is complete.
+
 ## Azure data studio
 
 Cross platform database management tool. Highly recommended.
 Install from <https://github.com/Microsoft/azuredatastudio>.
+
+Try connecting to the docker instance and run a few queries.
+
+Once it is setup, choose any task from below to learn more.
+
+## Tasks
+
+Each task talks about a topic and walks through some queries to explore. It will provide steps to perform database setup (as required).
+
+- [Statistics in SQL Server](tasks/statistics.md)
