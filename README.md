@@ -7,8 +7,13 @@ Gets the docker image for SQL Server and connects to it from a command line
 client.
 
 ```sh
-> docker pull mcr.microsoft.com/mssql/server:2017-latest
-> docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=Passw0rd' -p 1433:1433 --name sql1 -d mcr.microsoft.com/mssql/server:2017-latest
+> docker pull mcr.microsoft.com/mssql/server:2019-latest
+
+# Create a new volume to hold sql data
+> docker volume create 'sql2019'
+
+# Start the container with volume attached
+> docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=Passw0rd' -p 1433:1433 --name sql1 --mount source=sql2019-d,destination=/mnt/data mcr.microsoft.com/mssql/server:2019-latest
 ```
 
 Enumerate default databases in SQL server.
